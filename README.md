@@ -38,6 +38,15 @@ To train the policy network on different benchmarks including **xView**, **DOTA*
   python3 vas.py
 ```
 
+**Train the Greedy Selection Policy Network **
+
+
+To train the greedy selection policy network on different benchmarks including **xView**, **DOTA** dataset:
+
+```shell
+  python3 greedy_selection.py
+```
+
 For questions or comments, please send an e-mail to **anindyasarkar.ece@gmail.com** or use the issue tab in github.
 
 You can cite our paper as:
