@@ -46,6 +46,11 @@ To train the greedy selection policy network on different benchmarks including *
 ```shell
   python3 greedy_selection.py
 ```
+To train the greedy classification network on different benchmarks including **xView**, **DOTA** dataset, run:
+
+```shell
+  python3 greedy_classification.py
+```
 
 For questions or comments, please send an e-mail to **anindyasarkar.ece@gmail.com** or use the issue tab in github.
 
