@@ -38,7 +38,7 @@ To train the policy network on different benchmarks including **xView**, **DOTA*
   python3 vas.py
 ```
 
-**Train the Greedy Selection Policy Network **
+**Train the Greedy Selection Policy Network**
 
 
 To train the greedy selection policy network on different benchmarks including **xView**, **DOTA** dataset:
