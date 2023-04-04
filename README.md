@@ -40,10 +40,10 @@ To train the policy network on different benchmarks including **xView**, **DOTA*
 
 Note that, vas_train.py script is used to train the vas policy with ship as target class from DOTA and 6 * 6 grid structure.
 In order to train VAS in different settings as reported in the paper, modify the following:
-1. Use the appropriate model class for each settings as defined in utils.py ( for example, in order to train VAS with large vehicle target class from DOTA and with 8 * 8 grid structure, use the model class defined in line 900 to line 950 in utils.py. VAS policy architecture for each setting is also defined in utils.py. We mention the setting name just above the model class definition in each settings. VAS policy architecture for all different settings we consider is defined between line 595 to line 950 in utils.py script inside utils_c folder.
-2. Specify the right train/test csv file path as input for that particular setting in "get_datasetVIS" function as defined in utils.py. Provide the path of train csv file in line 381 of utils.py and test csv file in line 384 of utils.py.
-3. Provide the appropriate label file for that particular settings in dataloader.py script in the dataset folder. Specifically in line 189 and in line 230.
-4. Provide the appropriate value for num_actions in line 6 of constant.py. For example, in case of 6 * 6 grid structure, num_actions = 36.
+1. Use the **appropriate model class** for each settings as defined in utils.py ( for example, in order to train VAS with large vehicle target class from DOTA and with 8 * 8 grid structure, use the model class defined in line 900 to line 950 in utils.py. VAS policy architecture for each setting is also defined in utils.py. We mention the setting name just above the model class definition in each settings. VAS policy architecture for all different settings we consider is defined between line 595 to line 950 in utils.py script inside utils_c folder.
+2. Specify the **right train/test csv file path** as input for that particular setting in "get_datasetVIS" function as defined in utils.py. Provide the path of train csv file in line 381 of utils.py and test csv file in line 384 of utils.py.
+3. Provide the **appropriate label file** for that particular settings in dataloader.py script in the dataset folder. Specifically in line 189 and in line 230.
+4. Provide the **appropriate value for num_actions** in line 6 of constant.py. For example, in case of 6 * 6 grid structure, num_actions = 36.
 
 
 ## Evaluate
