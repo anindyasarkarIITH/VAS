@@ -7,7 +7,7 @@ This repository contains implementation of our work titled as __A Visual Active 
 
 **PDF**: https://arxiv.org/pdf/2211.15788.pdf
 
-**Authors**: Anindya Sarkar, Michael Lanier, Scott Alfeld, Roman Garnett, Nathan Jacobs, Yevgeniy Vorobeychik.
+**Authors**: Anindya Sarkar, Michael Lanier, Scott Alfeld, Jiarui Feng, Roman Garnett, Nathan Jacobs, Yevgeniy Vorobeychik.
 
 -------------------------------------------------------------------------------------
 ## Requirements
