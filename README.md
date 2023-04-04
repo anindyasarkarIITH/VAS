@@ -43,7 +43,7 @@ In order to train VAS in different settings as reported in the paper, modify the
 1. Use the appropriate model class for each settings as defined in utils.py ( for example, in order to train VAS with large vehicle target class from DOTA and with 8 * 8 grid structure, use the model class defined in line 900 to line 950 in utils.py. VAS policy architecture for each setting is also defined in utils.py. We mention the setting just above the model class definition in each settings.
 2. Specify the right train and test csv files as input for that particular setting in "get_dataset_VIS" function as defined in utils.py. Provide the path of train csv file in line 381 of utils.py and test csv file in line 384 of utils.py.
 3. Provide the appropriate label file for that particular settings in dataloader.py script in the dataset folder. Specifically in line 189 and line 230.
-4. Provide the appropriate value for num_actions in line 6 of constant.py. For example, in case of 6 * 6 grid structure num_actions = 6.
+4. Provide the appropriate value for num_actions in line 6 of constant.py. For example, in case of 6 * 6 grid structure num_actions = 36.
 
 
 ## Evaluate
