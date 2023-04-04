@@ -35,8 +35,30 @@ This repository contains implementation of our work titled as __A Visual Active 
 To train the policy network on different benchmarks including **xView**, **DOTA** dataset:
 
 ```shell
-  python3 vas.py
+  python3 vas_train.py
 ```
+
+Note that, vas_train.py script is used to train the vas policy with ship as target class from DOTA and 6 * 6 grid structure.
+In order to train VAS in different settings as reported in the paper, modify the following:
+1. Use the appropriate model class for each settings as defined in utils.py ( for example, in order to train VAS with large vehicle target class from DOTA and with 8 * 8 grid structure, use the model class defined in line 900 to line 950 in utils.py. VAS policy architecture for each setting is also defined in utils.py. We mention the setting just above the model class definition in each settings.
+2. Specify the right train and test csv files as input for that particular setting in "get_dataset_VIS" function as defined in utils.py. Provide the path of train csv file in line 381 of utils.py and test csv file in line 384 of utils.py.
+3. Provide the appropriate label file for that particular settings in dataloader.py script in the dataset folder. Specifically in line 189 and line 230.
+4. Provide the appropriate value for num_actions in line 6 of constant.py. For example, in case of 6 * 6 grid structure num_actions = 6.
+
+
+## Evaluate
+**Test the VAS Policy Network**
+
+To test the policy network on different benchmarks including **xView**, **DOTA** dataset:
+
+```shell
+  python3 vas_test.py
+```
+
+In order to test VAS in different settings, follow the exact same modification instructions as mentioned above for the training part.
+Note that, the provided code is used to test vas in uniform query cost setting, where, we assign the cost budget in line 57. In order to test VAS in distance based query cost setting, assign the budget cost in line 79 and uncomment the lines from 95 to 103. 
+
+We provide the trained VAS policy model parameters for different settings in the following Google Drive folder. 
 
 **Train the Greedy Selection Policy Network**
 
