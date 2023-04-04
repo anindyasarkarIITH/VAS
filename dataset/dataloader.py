@@ -184,10 +184,10 @@ class CustomDatasetFromImages(Dataset):
         # Read the csv file
         data_info = pd.read_csv(csv_path, header=None)
         # Second column is the image paths
-        self.image_arr = np.asarray(data_info.iloc[0:450 , 0]) #300 for dota
+        self.image_arr = np.asarray(data_info.iloc[0:300 , 0]) #450 FOR XVIEW
         # First column is the image IDs
         self.label_arr = np.load('/home/research/Visual_Active_Search_Project/EfficientObjectDetection/label.npy') 
-        self.label_arr = self.label_arr[0:450 ] 
+        self.label_arr = self.label_arr[0:300 ] 
         
         # Calculate len
         self.data_len = len(self.image_arr) #data_info
@@ -196,7 +196,7 @@ class CustomDatasetFromImages(Dataset):
         # Get image name from the pandas df
         single_image_name = self.image_arr[index]
         # Open image
-        img_as_img = Image.open(single_image_name) #.convert('RGB') for dota
+        img_as_img = Image.open(single_image_name).convert('RGB') #for XVIEW Comment out .convert('RGB')
         # Transform the image
         img_as_tensor = self.transforms(img_as_img)
         # Get label(class) of the image based on the cropped pandas column
@@ -224,11 +224,11 @@ class CustomDatasetFromImagesTest(Dataset):
         data_info = pd.read_csv(csv_path, header=None)
         # Second column is the image paths
         
-        self.image_arr = np.asarray(data_info.iloc[450: , 0]) 
+        self.image_arr = np.asarray(data_info.iloc[300: , 0])  # 450 FOR XVIEW
         # First column is the image IDs
         
         self.label_arr = np.load('/home/research/Visual_Active_Search_Project/EfficientObjectDetection/label.npy') 
-        self.label_arr = self.label_arr[450:] #450 for xview #300 for dota
+        self.label_arr = self.label_arr[300:] #450 for xview #300 for dota
         
         # Calculate len
         self.data_len = len(self.image_arr)
@@ -237,7 +237,7 @@ class CustomDatasetFromImagesTest(Dataset):
         # Get image name from the pandas df
         single_image_name = self.image_arr[index]
         # Open image
-        img_as_img = Image.open(single_image_name) #.convert('RGB') for dota
+        img_as_img = Image.open(single_image_name).convert('RGB') #for XVIEW comment out .convert('RGB') part.
         
         # Transform the image
         img_as_tensor = self.transforms(img_as_img)
