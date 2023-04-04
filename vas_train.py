@@ -134,7 +134,7 @@ def train(epoch):
         
         for sample in range(int(inputs.shape[0])):
             flag = False
-            remain_cost = 100
+            remain_cost = 100 # random.randint(50, 100)
             for time_step in range(len(store_policy_out)):
                 if flag == False:
                     grid_id = int(store_policy_out[time_step][sample]) 
