@@ -26,7 +26,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 
 parser = argparse.ArgumentParser(description='PolicyNetworkTraining')
 parser.add_argument('--lr', type=float, default=1e-4, help='learning rate') 
-parser.add_argument('--data_dir', default='/home/research/anindya/Visual_Active_Search_Project/EfficientObjectDetection/', help='data directory')
+parser.add_argument('--data_dir', default='data_path', help='data directory')
 parser.add_argument('--load', default=None, help='checkpoint to load agent from')
 parser.add_argument('--cv_dir', default='cv/tmp/', help='checkpoint directory (models and logs are saved here)')
 parser.add_argument('--batch_size', type=int, default=8, help='batch size')
