@@ -58,7 +58,7 @@ To test the policy network on different benchmarks including **xView**, **DOTA**
 In order to test VAS in different settings, follow the exact same modification instructions as mentioned above for the training part.
 Note that, the provided code is used to test vas in **uniform query cost** setting, where, we assign the cost budget in line 57. In order to test VAS in **distance based query cost** setting, assign the cost budget in line 79 and uncomment the lines from 95 to 103. 
 
-We provide the trained VAS policy model parameters for each settings in the following Google Drive folder link: https://drive.google.com/file/d/1owAm7gb9X8DEO0YCnYO2dY_z6yuSTN5q/view?usp=share_link
+We provide the trained VAS policy model parameters for each settings in the following Google Drive folder link: https://drive.google.com/drive/folders/1VQhCtVOXfKy3rQ603O8eDSXV5KM1X8dv?usp=sharing
 
 **Train the Greedy Selection Policy Network**
 
